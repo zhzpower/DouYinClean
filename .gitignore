@@ -42,7 +42,7 @@ Podfile.lock
  
 DouYinDemo/TargetApp
 DouYinDemo/Aweme_Headers
-DouYinDemo/Aweme.app
+DouYinDemo/Aweme
 *.lock
 .clang-format
 settings.json
