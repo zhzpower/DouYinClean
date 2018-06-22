@@ -74,6 +74,7 @@
 %end
 
 %hook AWEFeedTableViewController
+
 // 进来就隐藏
 - (void)tableView:(UITableView *)tableView willDisplayCell:(AWEFeedViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([cell isKindOfClass:%c(AWEFeedViewCell)]) {
@@ -160,4 +161,22 @@
 }
 
 %end
+
+%hook AWENetworkService
+/*
+ 1. AWEAwemeResponseModel
+ 2. error
+ */
++ (id)getWithURLString:(id)arg1 params:(id)arg2 modelClass:(Class)arg3 completion:(id)arg4 {
+    return %orig;
+}
+%end
+
+// 去广告
+%hook TTAdSplashCache
++ (id)sharedCache {
+    return nil;
+}
+%end
+
 
