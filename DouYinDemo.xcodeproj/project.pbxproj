@@ -279,7 +279,7 @@
 				9DB08E9E20A2DFF000100FE0 /* ShellScript */,
 				9DB08E9F20A2DFF000100FE0 /* Resources */,
 				9DB08EA020A2DFF000100FE0 /* CopyFiles */,
-				9DB08EA120A2DFF000100FE0 /* ShellScript */,
+				9DB08EA120A2DFF000100FE0 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -368,20 +368,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh\n";
 		};
-		9DB08EA120A2DFF000100FE0 /* ShellScript */ = {
+		9DB08EA120A2DFF000100FE0 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign\n";
 		};
 		9DB08EB020A2DFF000100FE0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -664,6 +665,7 @@
 		9DB08EEF20A2DFF000100FE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3D99DT85D;
 				ENABLE_BITCODE = NO;
@@ -675,8 +677,9 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huashi.DouYinDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huashi.DouYin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -684,6 +687,7 @@
 		9DB08EF020A2DFF000100FE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A3D99DT85D;
 				ENABLE_BITCODE = NO;
@@ -695,8 +699,9 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.huashi.DouYinDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huashi.DouYin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
