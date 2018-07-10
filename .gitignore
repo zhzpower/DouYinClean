@@ -43,6 +43,11 @@ Podfile.lock
 DouYinDemo/TargetApp
 DouYinDemo/Aweme_Headers
 DouYinDemo/Aweme.app/*
+
+tweak/obj/*
+tweak/packages/*
+tweak/.theos/*
+
 *.lock
 .clang-format
 settings.json
